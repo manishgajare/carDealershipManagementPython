@@ -5,8 +5,6 @@ from Dealership.Invoice.Invoice import Invoice
 class InvoiceCatalog:
     __instance = None
     __lock = threading.Lock()
-    __invoice_list = None
-    __invoice_count_for_id = None
 
     def __new__(cls):
         if cls.__instance is None:
@@ -23,18 +21,27 @@ class InvoiceCatalog:
         self.__invoice_count_for_id = 1
         self.__initialized = True
 
-    def get_invoice_list(self):
+    @property
+    def invoice_list(self):
         return self.__invoice_list
 
+    @property
+    def invoice_count_for_id(self):
+        return self.__invoice_count_for_id
+
+    @invoice_count_for_id.setter
+    def invoice_count_for_id(self, value):
+        self.__invoice_count_for_id = value
+
     def add_invoice(self, order):
-        invoice = Invoice(self.__invoice_count_for_id, order)
-        self.__invoice_count_for_id += 1
-        self.__invoice_list.add(invoice)
+        invoice = Invoice(self.invoice_count_for_id, order)
+        self.invoice_count_for_id += 1
+        self.invoice_list.add(invoice)
         return invoice
 
     def toString(self):
         invoice_catalog_string = ''
         print('Invoice Catalog -> ')
-        for invoice in self.__invoice_list:
+        for invoice in self.invoice_list:
             invoice_catalog_string = invoice_catalog_string + invoice.toString() + '\n'
         return invoice_catalog_string
