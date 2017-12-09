@@ -29,7 +29,7 @@ class CustomerDirectory:
 
     def check_if_exist(self, person):
         for customer in self.__customer_list:
-            if customer.get_person() == person:
+            if customer.person == person:
                 return customer
         return None
 
