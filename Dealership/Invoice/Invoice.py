@@ -4,7 +4,7 @@ class Invoice:
         self.__order = order
         self.__price = 0
         for order_item in order.order_item_list:
-            self.__price += order_item.get_price()
+            self.__price += order_item.price
 
     def __eq__(self, other):
         return self.id == other.id
