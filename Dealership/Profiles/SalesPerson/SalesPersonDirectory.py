@@ -71,10 +71,10 @@ class SalesPersonDirectory:
                         vehicle_recommendations[vehicle] = 10
 
         for order in order_catalog.get_order_list():
-            person = order.get_customer().get_person()
+            person = order.customer.get_person()
             if self.check_if_person_falls_in_criteria(person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                                       ceiling_value_for_income, gender_of_potential_customer):
-                for order_item in order.get_order_item_list():
+                for order_item in order.order_item_list:
                     vehicle = order_item.get_inventory_item().vehicle
                     if vehicle in vehicle_recommendations:
                         vehicle_recommendations[vehicle] = vehicle_recommendations.get(vehicle) + 20
