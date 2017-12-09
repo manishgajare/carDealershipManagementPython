@@ -25,6 +25,12 @@ class PersonDirectory:
         self.__person_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        person_directory_string = 'Person Directory -> '
+        for person in self.person_list:
+            person_directory_string = person_directory_string + person.__str__() + '\n'
+        return person_directory_string
+
     @property
     def person_list(self):
         return self.__person_list
@@ -60,10 +66,4 @@ class PersonDirectory:
         self.person_list.add(person)
         return person
 
-    def toString(self):
-        person_directory_string = ''
-        print('Person Directory -> ')
-        for person in self.person_list:
-            person_directory_string = person_directory_string + person.toString() + '\n'
-        return person_directory_string
 

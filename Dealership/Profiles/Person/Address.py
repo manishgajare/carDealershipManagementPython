@@ -7,6 +7,14 @@ class Address:
         self.__country = country
         self.__zipcode = zipcode
 
+    def __str__(self):
+        return '{}, {}, {}, {}. {} - {}'.format(self.street_name,
+                                                self.block_number,
+                                                self.city,
+                                                self.state,
+                                                self.country,
+                                                self.zipcode)
+
     @property
     def street_name(self):
         return self.__street_name
@@ -30,11 +38,3 @@ class Address:
     @property
     def zipcode(self):
         return self.__zipcode
-
-    def toString(self):
-        return '{}, {}, {}, {}. {} - {}'.format(self.street_name,
-                                                self.block_number,
-                                                self.city,
-                                                self.state,
-                                                self.country,
-                                                self.zipcode)

@@ -28,6 +28,12 @@ class InventoryCatalog:
         self.__inventory_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        inventory_catalog_string = 'Inventory Catalog -> \n'
+        for inventory_item in self.inventory_list:
+            inventory_catalog_string = inventory_catalog_string + inventory_item.__str__() + '\n'
+        return inventory_catalog_string
+
     @property
     def inventory_list(self):
         return self.__inventory_list
@@ -136,9 +142,3 @@ class InventoryCatalog:
 
         print('Not enough space to add Inventory')
         return existing_item
-
-    def toString(self):
-        inventory_catalog_string = ''
-        for inventory_item in self.inventory_list:
-            inventory_catalog_string = inventory_catalog_string + inventory_item.toString() + '\n'
-        return inventory_catalog_string

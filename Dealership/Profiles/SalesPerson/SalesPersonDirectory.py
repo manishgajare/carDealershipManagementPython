@@ -24,6 +24,12 @@ class SalesPersonDirectory:
         self.__sales_person_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        sales_person_directory_string = 'Sales Person Directory -> '
+        for sales_person in self.sales_person_list:
+            sales_person_directory_string = sales_person_directory_string + sales_person.__str__() + '\n'
+        return sales_person_directory_string
+
     @property
     def sales_person_list(self):
         return self.__sales_person_list
@@ -101,9 +107,3 @@ class SalesPersonDirectory:
         today = date.today()
         return today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
 
-    def toString(self):
-        sales_person_directory_string = ''
-        print('Sales Person Directory -> ')
-        for sales_person in self.sales_person_list:
-            sales_person_directory_string = sales_person_directory_string + sales_person.toString() + '\n'
-        return sales_person_directory_string

@@ -12,6 +12,9 @@ class Customer:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        return 'id: {}, person: {}'.format(self.id, self.person.__str__())
+
     @property
     def id(self):
         return self.__id
@@ -19,6 +22,3 @@ class Customer:
     @property
     def person(self):
         return self.__person
-
-    def toString(self):
-        return 'id: {}, person: {}'.format(self.id, self.person)

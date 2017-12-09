@@ -14,6 +14,12 @@ class InventoryItem:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        return 'id: {}, price: {}, quantity available: {}, vehicle -> {}'.format(self.id,
+                                                                                 self.price,
+                                                                                 self.quantity_available,
+                                                                                 self.vehicle.__str__())
+
     @property
     def id(self):
         return self.__id
@@ -37,9 +43,3 @@ class InventoryItem:
     @quantity_available.setter
     def quantity_available(self, value):
         self.__quantity_available = value
-
-    def toString(self):
-        return 'id: {}, price: {}, quantity available: {}, vehicle -> {}'.format(self.id,
-                                                                                 self.price,
-                                                                                 self.quantity_available,
-                                                                                 self.vehicle.toString())

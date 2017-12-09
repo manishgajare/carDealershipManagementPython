@@ -21,6 +21,11 @@ class Person:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        return '{} {}\n {}'.format(self.first_name,
+                                   self.last_name,
+                                   self.address.__str__())
+
     @property
     def id(self):
         return self.__id
@@ -60,8 +65,3 @@ class Person:
     @property
     def vehicle_interest(self):
         return self.__vehicle_interest
-
-    def toString(self):
-        return '{} {}\n {}'.format(self.first_name,
-                                   self.last_name,
-                                   self.address)

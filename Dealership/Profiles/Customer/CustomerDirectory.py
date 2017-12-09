@@ -22,6 +22,12 @@ class CustomerDirectory:
         self.__customer_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        customer_directory_string = 'Customer Directory -> '
+        for customer in self.customer_list:
+            customer_directory_string = customer_directory_string + customer.__str__() + '\n'
+        return customer_directory_string
+
     @property
     def customer_list(self):
         return self.__customer_list
@@ -50,9 +56,3 @@ class CustomerDirectory:
         self.customer_list.add(customer)
         return customer
 
-    def toString(self):
-        customer_directory_string = ''
-        print('Customer Directory -> ')
-        for customer in self.customer_list:
-            customer_directory_string = customer_directory_string + customer.toString() + '\n'
-        return customer_directory_string

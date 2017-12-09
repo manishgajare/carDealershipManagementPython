@@ -17,6 +17,15 @@ class Vehicle:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        return 'id: {}, make: {}, model: {}, year: {}, price: {}, size: {}, color: {}'.format(self.id,
+                                                                                              self.make,
+                                                                                              self.model,
+                                                                                              self.year,
+                                                                                              self.price,
+                                                                                              self.size,
+                                                                                              self.color)
+
     @property
     def id(self):
         return self.__id
@@ -48,12 +57,3 @@ class Vehicle:
     @price.setter
     def price(self, price):
         self.__price = price
-
-    def toString(self):
-        return 'id: {}, make: {}, model: {}, year: {}, price: {}, size: {}, color: {}'.format(self.id,
-                                                                                              self.make,
-                                                                                              self.model,
-                                                                                              self.year,
-                                                                                              self.price,
-                                                                                              self.size,
-                                                                                              self.color)

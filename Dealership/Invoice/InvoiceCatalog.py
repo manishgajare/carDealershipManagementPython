@@ -21,6 +21,12 @@ class InvoiceCatalog:
         self.__invoice_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        invoice_catalog_string = 'Invoice Catalog -> \n'
+        for invoice in self.invoice_list:
+            invoice_catalog_string = invoice_catalog_string + invoice.__str__() + '\n'
+        return invoice_catalog_string
+
     @property
     def invoice_list(self):
         return self.__invoice_list
@@ -38,10 +44,3 @@ class InvoiceCatalog:
         self.invoice_count_for_id += 1
         self.invoice_list.add(invoice)
         return invoice
-
-    def toString(self):
-        invoice_catalog_string = ''
-        print('Invoice Catalog -> ')
-        for invoice in self.invoice_list:
-            invoice_catalog_string = invoice_catalog_string + invoice.toString() + '\n'
-        return invoice_catalog_string

@@ -13,6 +13,9 @@ class OrderItem:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        return 'id: {}, inventory item: {}, price: {}'.format(self.id, self.inventory_item.__str__(), self.price)
+
     @property
     def id(self):
         return self.__id
@@ -24,6 +27,3 @@ class OrderItem:
     @property
     def price(self):
         return self.__price
-
-    def toString(self):
-        return 'id: {}, inventory item: {}, price: {}'.format(self.id, self.inventory_item, self.price)
