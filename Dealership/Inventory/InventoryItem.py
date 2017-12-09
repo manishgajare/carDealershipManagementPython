@@ -1,5 +1,5 @@
 class InventoryItem:
-    def __init__(self, id=0, vehicle=None, price=0, quantity_available=0):
+    def __init__(self, id, vehicle, price, quantity_available):
         self.__id = id
         self.__vehicle = vehicle
         self.__price = price * 1.1

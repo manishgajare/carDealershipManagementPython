@@ -1,5 +1,5 @@
 class SalesPerson:
-    def __init__(self, id=0, person=None):
+    def __init__(self, id, person):
         self.__id = id
         self.__person = person
 
