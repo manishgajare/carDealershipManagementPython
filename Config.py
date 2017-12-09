@@ -66,7 +66,7 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
+        for v in vehicle_catalog.vehicle_list:
             if v.id == 1 or v.id == 10 or v.id == 15 or v.id == 25:
                 vehicle_list.add(v)
                 if v.id == 1:
@@ -85,7 +85,7 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
+        for v in vehicle_catalog.vehicle_list:
             if v.id == 1 or v.id == 2 or v.id == 17 or v.id == 15:
                 vehicle_list.add(v)
                 if v.id == 1:
@@ -104,7 +104,7 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
+        for v in vehicle_catalog.vehicle_list:
             if v.id == 7 or v.id == 9 or v.id == 8 or v.id == 2:
                 vehicle_list.add(v)
                 if v.id == 7:
@@ -123,7 +123,7 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
+        for v in vehicle_catalog.vehicle_list:
             if v.id == 13 or v.id == 23 or v.id == 19 or v.id == 30:
                 vehicle_list.add(v)
                 if v.id == 13:

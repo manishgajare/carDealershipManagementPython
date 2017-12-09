@@ -6,8 +6,6 @@ from Dealership.Inventory.Vehicle import Vehicle
 class VehicleCatalog:
     __instance = None
     __lock = threading.Lock()
-    __vehicle_list = None
-    __vehicle_count_for_id = None
 
     def __new__(cls):
         if cls.__instance is None:
@@ -24,11 +22,20 @@ class VehicleCatalog:
         self.__vehicle_count_for_id = 1
         self.__initialized = True
 
-    def get_vehicle_list(self):
+    @property
+    def vehicle_list(self):
         return self.__vehicle_list
 
+    @property
+    def vehicle_count_for_id(self):
+        return self.__vehicle_count_for_id
+
+    @vehicle_count_for_id.setter
+    def vehicle_count_for_id(self, value):
+        self.__vehicle_count_for_id = value
+
     def check_if_exist(self, vehicle_make, vehicle_size, vehicle_color, year, model):
-        for vehicle in self.__vehicle_list:
+        for vehicle in self.vehicle_list:
             if vehicle.make == vehicle_make and \
                     vehicle.size == vehicle_size and \
                     vehicle.color == vehicle_color and \
@@ -47,15 +54,15 @@ class VehicleCatalog:
                 print('updated price for existing vehicle', existing_vehicle)
             return existing_vehicle
 
-        v = Vehicle(self.__vehicle_count_for_id, make, model, year, price, size, color);
-        self.__vehicle_count_for_id += 1
-        self.__vehicle_list.add(v)
+        v = Vehicle(self.__vehicle_count_for_id, make, model, year, price, size, color)
+        self.vehicle_count_for_id += 1
+        self.vehicle_list.add(v)
         print('Vehicle added to Vehicle Catalog')
         return v
 
     def toString(self):
         vehicle_catalog_string = ''
         print('Vehicle Catalog -> ')
-        for vehicle in self.__vehicle_list:
+        for vehicle in self.vehicle_list:
             vehicle_catalog_string = vehicle_catalog_string + vehicle.toString() + '\n'
         return vehicle_catalog_string
