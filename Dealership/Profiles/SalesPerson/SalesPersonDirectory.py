@@ -6,12 +6,10 @@ from datetime import datetime, date
 
 
 class SalesPersonDirectory:
-    __instance = None
-    __lock = threading.Lock()
-    __sales_person_list = None
-    __sales_person_count_for_id = None
-
     def __new__(cls):
+        if not hasattr(SalesPersonDirectory, '__instance'):
+            cls.__lock = threading.Lock()
+            cls.__instance = None
         if cls.__instance is None:
             with cls.__lock:
                 if cls.__instance is None:
@@ -26,7 +24,8 @@ class SalesPersonDirectory:
         self.__sales_person_count_for_id = 1
         self.__initialized = True
 
-    def get_sales_person_list(self):
+    @property
+    def sales_person_list(self):
         return self.__sales_person_list
 
     def check_if_exist(self, person):
