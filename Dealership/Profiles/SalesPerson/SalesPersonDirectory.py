@@ -64,7 +64,7 @@ class SalesPersonDirectory:
         for person in person_directory.person_list:
             if self.check_if_person_falls_in_criteria(person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                                       ceiling_value_for_income, gender_of_potential_customer):
-                for vehicle in person.vehicle_interest.get_vehicle_list():
+                for vehicle in person.vehicle_interest.vehicle_list:
                     if vehicle in vehicle_recommendations:
                         vehicle_recommendations[vehicle] = vehicle_recommendations.get(vehicle) + 10
                     else:

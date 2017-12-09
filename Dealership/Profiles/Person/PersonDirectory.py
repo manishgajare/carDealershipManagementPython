@@ -39,7 +39,7 @@ class PersonDirectory:
 
     def check_if_exist(self, ssn):
         for person in self.person_list:
-            if person.sensitive_information.get_ssn() == ssn:
+            if person.sensitive_information.ssn == ssn:
                 return person
         return None
 
@@ -53,7 +53,7 @@ class PersonDirectory:
         contact_details = ContactDetails(phone_number, email)
         sensitive_information = SensitiveInformation(ssn, passport_id, citizenship_country)
         vehicle_interest = VehicleInterest()
-        vehicle_interest.set_vehicle_list(vehicle_list)
+        vehicle_interest.vehicle_list = vehicle_list
         person = Person(self.person_count_for_id, first_name, last_name, birth_date, income, gender,
                         address, contact_details, sensitive_information, vehicle_interest)
         self.person_count_for_id += 1
