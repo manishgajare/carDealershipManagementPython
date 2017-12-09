@@ -66,13 +66,11 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        count = 0
         for v in vehicle_catalog.get_vehicle_list():
-            if count == 0 or count == 10 or count == 15 or count == 25:
+            if v.get_id() == 1 or v.get_id() == 10 or v.get_id() == 15 or v.get_id() == 25:
                 vehicle_list.add(v)
-                if count == 0:
+                if v.get_id() == 1:
                     vehicle = v
-            count += 1
         person = VehicleDealership.create_profile('Manish', 'Gajare',
                                                   datetime.datetime.strptime('05/15/1991', '%m/%d/%Y'), 85000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
@@ -87,13 +85,11 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        count = 0
         for v in vehicle_catalog.get_vehicle_list():
-            if count == 0 or count == 1 or count == 17 or count == 15:
+            if v.get_id() == 1 or v.get_id() == 2 or v.get_id() == 17 or v.get_id() == 15:
                 vehicle_list.add(v)
-                if count == 0:
+                if v.get_id() == 1:
                     vehicle = v
-            count += 1
         person = VehicleDealership.create_profile('Yash', 'Kochar',
                                                   datetime.datetime.strptime('05/15/1989', '%m/%d/%Y'), 80000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
@@ -108,13 +104,11 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        count = 0
         for v in vehicle_catalog.get_vehicle_list():
-            if count == 7 or count == 9 or count == 8 or count == 11:
+            if v.get_id() == 7 or v.get_id() == 9 or v.get_id() == 8 or v.get_id() == 2:
                 vehicle_list.add(v)
-                if count == 7:
+                if v.get_id() == 7:
                     vehicle = v
-            count += 1
         person = VehicleDealership.create_profile('Ronak', 'Massand',
                                                   datetime.datetime.strptime('05/15/1992', '%m/%d/%Y'), 90000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
@@ -129,13 +123,11 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        count = 0
         for v in vehicle_catalog.get_vehicle_list():
-            if count == 13 or count == 23 or count == 19 or count == 30:
+            if v.get_id() == 13 or v.get_id() == 23 or v.get_id() == 19 or v.get_id() == 30:
                 vehicle_list.add(v)
-                if count == 13:
+                if v.get_id() == 13:
                     vehicle = v
-            count += 1
         person = VehicleDealership.create_profile('Prashant', 'Iyer',
                                                   datetime.datetime.strptime('05/15/1991', '%m/%d/%Y'), 85000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,

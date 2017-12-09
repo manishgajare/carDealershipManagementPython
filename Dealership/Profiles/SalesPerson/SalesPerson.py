@@ -6,6 +6,15 @@ class SalesPerson:
         self.__id = id
         self.__person = person
 
+    def __eq__(self, other):
+        return self.get_id() == other.get_id()
+
+    def __ne__(self, other):
+            return not self.__eq__(other)
+
+    def __hash__(self):
+        return hash(self.__id)
+
     def get_id(self):
         return self.__id
 
