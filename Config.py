@@ -67,9 +67,9 @@ class Config:
         # adding customer and placing order
         vehicle_list = set()
         for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 1 or v.get_id() == 10 or v.get_id() == 15 or v.get_id() == 25:
+            if v.id == 1 or v.id == 10 or v.id == 15 or v.id == 25:
                 vehicle_list.add(v)
-                if v.get_id() == 1:
+                if v.id == 1:
                     vehicle = v
         person = VehicleDealership.create_profile('Manish', 'Gajare',
                                                   datetime.datetime.strptime('05/15/1991', '%m/%d/%Y'), 85000, 'm',
@@ -86,9 +86,9 @@ class Config:
         # adding customer and placing order
         vehicle_list = set()
         for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 1 or v.get_id() == 2 or v.get_id() == 17 or v.get_id() == 15:
+            if v.id == 1 or v.id == 2 or v.id == 17 or v.id == 15:
                 vehicle_list.add(v)
-                if v.get_id() == 1:
+                if v.id == 1:
                     vehicle = v
         person = VehicleDealership.create_profile('Yash', 'Kochar',
                                                   datetime.datetime.strptime('05/15/1989', '%m/%d/%Y'), 80000, 'm',
@@ -105,9 +105,9 @@ class Config:
         # adding customer and placing order
         vehicle_list = set()
         for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 7 or v.get_id() == 9 or v.get_id() == 8 or v.get_id() == 2:
+            if v.id == 7 or v.id == 9 or v.id == 8 or v.id == 2:
                 vehicle_list.add(v)
-                if v.get_id() == 7:
+                if v.id == 7:
                     vehicle = v
         person = VehicleDealership.create_profile('Ronak', 'Massand',
                                                   datetime.datetime.strptime('05/15/1992', '%m/%d/%Y'), 90000, 'm',
@@ -124,9 +124,9 @@ class Config:
         # adding customer and placing order
         vehicle_list = set()
         for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 13 or v.get_id() == 23 or v.get_id() == 19 or v.get_id() == 30:
+            if v.id == 13 or v.id == 23 or v.id == 19 or v.id == 30:
                 vehicle_list.add(v)
-                if v.get_id() == 13:
+                if v.id == 13:
                     vehicle = v
         person = VehicleDealership.create_profile('Prashant', 'Iyer',
                                                   datetime.datetime.strptime('05/15/1991', '%m/%d/%Y'), 85000, 'm',

@@ -77,7 +77,7 @@ class SalesPersonDirectory:
         sorted_recommendations_by_points = sorted(vehicle_recommendations, key=vehicle_recommendations.get, reverse=True)
         top_recommendations = sorted_recommendations_by_points[:5]
         # sorting by price
-        top_recommendations.sort(key=lambda x: x.get_price(), reverse=True)
+        top_recommendations.sort(key=lambda x: x.price, reverse=True)
         return top_recommendations
 
     def check_if_person_falls_in_criteria(self, person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,

@@ -29,11 +29,11 @@ class VehicleCatalog:
 
     def check_if_exist(self, vehicle_make, vehicle_size, vehicle_color, year, model):
         for vehicle in self.__vehicle_list:
-            if vehicle.get_make() == vehicle_make and \
-                    vehicle.get_size() == vehicle_size and \
-                    vehicle.get_color() == vehicle_color and \
-                    vehicle.get_year() == year and \
-                    vehicle.get_model() == model:
+            if vehicle.make == vehicle_make and \
+                    vehicle.size == vehicle_size and \
+                    vehicle.color == vehicle_color and \
+                    vehicle.year == year and \
+                    vehicle.model == model:
                 return vehicle
         return None
 
@@ -41,7 +41,7 @@ class VehicleCatalog:
         existing_vehicle = self.check_if_exist(make, size, color, year, model)
         if existing_vehicle is not None:
             print('Vehicle already exist')
-            if existing_vehicle.get_price() != price:
+            if existing_vehicle.price != price:
                 existing_vehicle.set_price(price)
                 InventoryCatalog().check_if_exist(existing_vehicle).set_price(price)
                 print('updated price for existing vehicle', existing_vehicle)
