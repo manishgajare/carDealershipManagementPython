@@ -6,10 +6,10 @@ from datetime import datetime, date
 
 
 class SalesPersonDirectory:
+    __instance = None
+    __lock = threading.Lock()
+
     def __new__(cls):
-        if not hasattr(SalesPersonDirectory, '__instance'):
-            cls.__lock = threading.Lock()
-            cls.__instance = None
         if cls.__instance is None:
             with cls.__lock:
                 if cls.__instance is None:
@@ -28,8 +28,16 @@ class SalesPersonDirectory:
     def sales_person_list(self):
         return self.__sales_person_list
 
+    @property
+    def sales_person_count_for_id(self):
+        return self.__sales_person_count_for_id
+
+    @sales_person_count_for_id.setter
+    def sales_person_count_for_id(self, value):
+        self.__sales_person_count_for_id = value
+
     def check_if_exist(self, person):
-        for sales_person in self.__sales_person_list:
+        for sales_person in self.sales_person_list:
             if sales_person.get_person() == person:
                 return sales_person
         return None
@@ -39,9 +47,9 @@ class SalesPersonDirectory:
         if existing_sales_person is not None:
             return existing_sales_person
 
-        sales_person = SalesPerson(self.__sales_person_count_for_id, person)
-        self.__sales_person_count_for_id += 1
-        self.__sales_person_list.add(sales_person)
+        sales_person = SalesPerson(self.sales_person_count_for_id, person)
+        self.sales_person_count_for_id += 1
+        self.sales_person_list.add(sales_person)
         return sales_person
 
     def get_recommendations(self, age_of_potential_customer, gender_of_potential_customer, income_of_potential_customer):
@@ -96,6 +104,6 @@ class SalesPersonDirectory:
     def toString(self):
         sales_person_directory_string = ''
         print('Sales Person Directory -> ')
-        for sales_person in self.__sales_person_list:
+        for sales_person in self.sales_person_list:
             sales_person_directory_string = sales_person_directory_string + sales_person.toString() + '\n'
         return sales_person_directory_string
