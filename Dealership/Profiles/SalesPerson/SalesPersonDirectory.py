@@ -8,8 +8,6 @@ from datetime import datetime, date
 class SalesPersonDirectory:
     __instance = None
     __lock = threading.Lock()
-    __sales_person_list = None
-    __sales_person_count_for_id = None
 
     def __new__(cls):
         if cls.__instance is None:
@@ -26,11 +24,20 @@ class SalesPersonDirectory:
         self.__sales_person_count_for_id = 1
         self.__initialized = True
 
-    def get_sales_person_list(self):
+    @property
+    def sales_person_list(self):
         return self.__sales_person_list
 
+    @property
+    def sales_person_count_for_id(self):
+        return self.__sales_person_count_for_id
+
+    @sales_person_count_for_id.setter
+    def sales_person_count_for_id(self, value):
+        self.__sales_person_count_for_id = value
+
     def check_if_exist(self, person):
-        for sales_person in self.__sales_person_list:
+        for sales_person in self.sales_person_list:
             if sales_person.get_person() == person:
                 return sales_person
         return None
@@ -40,9 +47,9 @@ class SalesPersonDirectory:
         if existing_sales_person is not None:
             return existing_sales_person
 
-        sales_person = SalesPerson(self.__sales_person_count_for_id, person)
-        self.__sales_person_count_for_id += 1
-        self.__sales_person_list.add(sales_person)
+        sales_person = SalesPerson(self.sales_person_count_for_id, person)
+        self.sales_person_count_for_id += 1
+        self.sales_person_list.add(sales_person)
         return sales_person
 
     def get_recommendations(self, age_of_potential_customer, gender_of_potential_customer, income_of_potential_customer):
@@ -54,21 +61,21 @@ class SalesPersonDirectory:
         ceiling_value_for_income = income_of_potential_customer + 15000
         vehicle_recommendations = {}
 
-        for person in person_directory.get_person_list():
+        for person in person_directory.person_list:
             if self.check_if_person_falls_in_criteria(person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                                       ceiling_value_for_income, gender_of_potential_customer):
-                for vehicle in person.get_vehicle_interest().get_vehicle_list():
+                for vehicle in person.vehicle_interest.vehicle_list:
                     if vehicle in vehicle_recommendations:
                         vehicle_recommendations[vehicle] = vehicle_recommendations.get(vehicle) + 10
                     else:
                         vehicle_recommendations[vehicle] = 10
 
-        for order in order_catalog.get_order_list():
-            person = order.get_customer().get_person()
+        for order in order_catalog.order_list:
+            person = order.customer.person
             if self.check_if_person_falls_in_criteria(person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                                       ceiling_value_for_income, gender_of_potential_customer):
-                for order_item in order.get_order_item_list():
-                    vehicle = order_item.get_inventory_item().get_vehicle()
+                for order_item in order.order_item_list:
+                    vehicle = order_item.inventory_item.vehicle
                     if vehicle in vehicle_recommendations:
                         vehicle_recommendations[vehicle] = vehicle_recommendations.get(vehicle) + 20
                     else:
@@ -77,14 +84,14 @@ class SalesPersonDirectory:
         sorted_recommendations_by_points = sorted(vehicle_recommendations, key=vehicle_recommendations.get, reverse=True)
         top_recommendations = sorted_recommendations_by_points[:5]
         # sorting by price
-        top_recommendations.sort(key=lambda x: x.get_price(), reverse=True)
+        top_recommendations.sort(key=lambda x: x.price, reverse=True)
         return top_recommendations
 
     def check_if_person_falls_in_criteria(self, person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                           ceiling_value_for_income, gender_of_potential_customer):
-        age_of_person = self.calculate_age(person.get_birth_date())
-        income_of_person = person.get_income()
-        if gender_of_potential_customer == person.get_gender() \
+        age_of_person = self.calculate_age(person.birth_date)
+        income_of_person = person.income
+        if gender_of_potential_customer == person.gender \
                 and floor_value_for_income <= income_of_person <= ceiling_value_for_income \
                 and floor_value_for_age <= age_of_person <= ceiling_value_for_age:
             return True
@@ -97,6 +104,6 @@ class SalesPersonDirectory:
     def toString(self):
         sales_person_directory_string = ''
         print('Sales Person Directory -> ')
-        for sales_person in self.__sales_person_list:
+        for sales_person in self.sales_person_list:
             sales_person_directory_string = sales_person_directory_string + sales_person.toString() + '\n'
         return sales_person_directory_string

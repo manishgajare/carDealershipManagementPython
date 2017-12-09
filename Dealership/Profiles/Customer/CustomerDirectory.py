@@ -6,8 +6,6 @@ from Dealership.Profiles.Customer.Customer import Customer
 class CustomerDirectory:
     __instance = None
     __lock = threading.Lock()
-    __customer_list = None
-    __customer_count_for_id = None
 
     def __new__(cls):
         if cls.__instance is None:
@@ -24,28 +22,37 @@ class CustomerDirectory:
         self.__customer_count_for_id = 1
         self.__initialized = True
 
-    def get_customer_list(self):
+    @property
+    def customer_list(self):
         return self.__customer_list
 
+    @property
+    def customer_count_for_id(self):
+        return self.__customer_count_for_id
+
+    @customer_count_for_id.setter
+    def customer_count_for_id(self, value):
+        self.__customer_count_for_id = value
+
     def check_if_exist(self, person):
-        for customer in self.__customer_list:
-            if customer.get_person() == person:
+        for customer in self.customer_list:
+            if customer.person == person:
                 return customer
         return None
 
-    def add_cutomer(self, person):
+    def add_customer(self, person):
         existing_customer = self.check_if_exist(person)
         if existing_customer is not None:
             return existing_customer
 
-        customer = Customer(self.__customer_count_for_id, person)
-        self.__customer_count_for_id += 1
-        self.__customer_list.add(customer)
+        customer = Customer(self.customer_count_for_id, person)
+        self.customer_count_for_id += 1
+        self.customer_list.add(customer)
         return customer
 
     def toString(self):
         customer_directory_string = ''
         print('Customer Directory -> ')
-        for customer in self.__customer_list:
+        for customer in self.customer_list:
             customer_directory_string = customer_directory_string + customer.toString() + '\n'
         return customer_directory_string

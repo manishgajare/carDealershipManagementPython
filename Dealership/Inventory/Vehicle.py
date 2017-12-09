@@ -1,12 +1,4 @@
 class Vehicle:
-    __id = 0
-    __make = None
-    __model = ''
-    __year = 0
-    __price = 0
-    __size = None
-    __color = None
-
     def __init__(self, id, make, model, year, price, size, color):
         self.__id = id
         self.__make = make
@@ -17,43 +9,51 @@ class Vehicle:
         self.__color = color
 
     def __eq__(self, other):
-        return self.get_id() == other.get_id()
+        return self.id == other.id
 
     def __ne__(self, other):
             return not self.__eq__(other)
 
     def __hash__(self):
-        return hash(self.__id)
+        return hash(self.id)
 
-    def get_id(self):
+    @property
+    def id(self):
         return self.__id
 
-    def get_make(self):
+    @property
+    def make(self):
         return self.__make
 
-    def get_model(self):
+    @property
+    def model(self):
         return self.__model
 
-    def get_year(self):
+    @property
+    def year(self):
         return self.__year
 
-    def get_price(self):
+    @property
+    def price(self):
         return self.__price
 
-    def set_price(self, price):
-        self.__price = price
-
-    def get_size(self):
+    @property
+    def size(self):
         return self.__size
 
-    def get_color(self):
+    @property
+    def color(self):
         return self.__color
 
+    @price.setter
+    def price(self, price):
+        self.__price = price
+
     def toString(self):
-        return 'id: {}, make: {}, model: {}, year: {}, price: {}, size: {}, color: {}'.format(self.__id,
-                                                                                              self.__make,
-                                                                                              self.__model,
-                                                                                              self.__year,
-                                                                                              self.__price,
-                                                                                              self.__size,
-                                                                                              self.__color)
+        return 'id: {}, make: {}, model: {}, year: {}, price: {}, size: {}, color: {}'.format(self.id,
+                                                                                              self.make,
+                                                                                              self.model,
+                                                                                              self.year,
+                                                                                              self.price,
+                                                                                              self.size,
+                                                                                              self.color)

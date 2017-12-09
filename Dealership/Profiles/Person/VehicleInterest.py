@@ -1,13 +1,13 @@
 class VehicleInterest:
-    __vehicle_list = None
-
     def __init__(self):
         self.__vehicle_list = set()
 
-    def get_vehicle_list(self):
+    @property
+    def vehicle_list(self):
         return self.__vehicle_list
 
-    def set_vehicle_list(self, vehicle_list):
+    @vehicle_list.setter
+    def vehicle_list(self, vehicle_list):
         self.__vehicle_list = vehicle_list
 
     def toString(self):

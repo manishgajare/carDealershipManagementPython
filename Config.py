@@ -66,76 +66,76 @@ class Config:
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 1 or v.get_id() == 10 or v.get_id() == 15 or v.get_id() == 25:
+        for v in vehicle_catalog.vehicle_list:
+            if v.id == 1 or v.id == 10 or v.id == 15 or v.id == 25:
                 vehicle_list.add(v)
-                if v.get_id() == 1:
+                if v.id == 1:
                     vehicle = v
         person = VehicleDealership.create_profile('Manish', 'Gajare',
                                                   datetime.datetime.strptime('05/15/1991', '%m/%d/%Y'), 85000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '2028305422', 'manishgajare@gmail.com', '543-857-9012', 'KLM1041G',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+        customer = customer_directory.add_customer(person)
+        for i in inventory_catalog.inventory_list:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 1 or v.get_id() == 2 or v.get_id() == 17 or v.get_id() == 15:
+        for v in vehicle_catalog.vehicle_list:
+            if v.id == 1 or v.id == 2 or v.id == 17 or v.id == 15:
                 vehicle_list.add(v)
-                if v.get_id() == 1:
+                if v.id == 1:
                     vehicle = v
         person = VehicleDealership.create_profile('Yash', 'Kochar',
                                                   datetime.datetime.strptime('05/15/1989', '%m/%d/%Y'), 80000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '7583276666', 'yash@gmail.com', '543-857-7436', 'KLM456HM',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+        customer = customer_directory.add_customer(person)
+        for i in inventory_catalog.inventory_list:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 7 or v.get_id() == 9 or v.get_id() == 8 or v.get_id() == 2:
+        for v in vehicle_catalog.vehicle_list:
+            if v.id == 7 or v.id == 9 or v.id == 8 or v.id == 2:
                 vehicle_list.add(v)
-                if v.get_id() == 7:
+                if v.id == 7:
                     vehicle = v
         person = VehicleDealership.create_profile('Ronak', 'Massand',
                                                   datetime.datetime.strptime('05/15/1992', '%m/%d/%Y'), 90000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '8473620986', 'ronak@gmail.com', '543-857-1025', 'KLM34HLL',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+        customer = customer_directory.add_customer(person)
+        for i in inventory_catalog.inventory_list:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
 
         # adding customer and placing order
         vehicle_list = set()
-        for v in vehicle_catalog.get_vehicle_list():
-            if v.get_id() == 13 or v.get_id() == 23 or v.get_id() == 19 or v.get_id() == 30:
+        for v in vehicle_catalog.vehicle_list:
+            if v.id == 13 or v.id == 23 or v.id == 19 or v.id == 30:
                 vehicle_list.add(v)
-                if v.get_id() == 13:
+                if v.id == 13:
                     vehicle = v
         person = VehicleDealership.create_profile('Prashant', 'Iyer',
                                                   datetime.datetime.strptime('05/15/1991', '%m/%d/%Y'), 85000, 'm',
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '9286772351', 'prashant@gmail.com', '543-857-6734', 'KLM97G3J',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+        customer = customer_directory.add_customer(person)
+        for i in inventory_catalog.inventory_list:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
