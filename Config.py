@@ -77,7 +77,7 @@ class Config:
                                                   '2028305422', 'manishgajare@gmail.com', '543-857-9012', 'KLM1041G',
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
+        for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
         order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
@@ -96,7 +96,7 @@ class Config:
                                                   '7583276666', 'yash@gmail.com', '543-857-7436', 'KLM456HM',
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
+        for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
         order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
@@ -115,7 +115,7 @@ class Config:
                                                   '8473620986', 'ronak@gmail.com', '543-857-1025', 'KLM34HLL',
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
+        for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
         order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
@@ -134,7 +134,7 @@ class Config:
                                                   '9286772351', 'prashant@gmail.com', '543-857-6734', 'KLM97G3J',
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
-        for i in inventory_catalog.get_inventory_list():
+        for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
         order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)

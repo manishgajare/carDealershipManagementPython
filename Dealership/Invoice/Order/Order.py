@@ -40,7 +40,7 @@ class Order:
     def add_order_item(self, inventory_item, price):
         order_item = OrderItem(self.__order_item_count_for_id, inventory_item, price)
         self.__order_item_count_for_id += 1
-        InventoryCatalog().remove_inventory_item(inventory_item, 1)
+        InventoryCatalog().decrement_inventory_quantity(inventory_item, 1)
         self.__order_item_list.add(order_item)
         return order_item
 
