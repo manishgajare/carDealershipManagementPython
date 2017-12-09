@@ -76,7 +76,7 @@ class Config:
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '2028305422', 'manishgajare@gmail.com', '543-857-9012', 'KLM1041G',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
+        customer = customer_directory.add_customer(person)
         for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
@@ -95,7 +95,7 @@ class Config:
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '7583276666', 'yash@gmail.com', '543-857-7436', 'KLM456HM',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
+        customer = customer_directory.add_customer(person)
         for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
@@ -114,7 +114,7 @@ class Config:
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '8473620986', 'ronak@gmail.com', '543-857-1025', 'KLM34HLL',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
+        customer = customer_directory.add_customer(person)
         for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i
@@ -133,7 +133,7 @@ class Config:
                                                   '114 Longwood Avenue', '5', 'Brookline', 'MA', 'USA', 2446,
                                                   '9286772351', 'prashant@gmail.com', '543-857-6734', 'KLM97G3J',
                                                   'IND', vehicle_list)
-        customer = customer_directory.add_cutomer(person)
+        customer = customer_directory.add_customer(person)
         for i in inventory_catalog.inventory_list:
             if i.vehicle == vehicle:
                 inventory_item = i

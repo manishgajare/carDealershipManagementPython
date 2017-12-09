@@ -40,7 +40,7 @@ class CustomerDirectory:
                 return customer
         return None
 
-    def add_cutomer(self, person):
+    def add_customer(self, person):
         existing_customer = self.check_if_exist(person)
         if existing_customer is not None:
             return existing_customer
