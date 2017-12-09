@@ -64,7 +64,7 @@ class SalesPersonDirectory:
         for person in person_directory.get_person_list():
             if self.check_if_person_falls_in_criteria(person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                                       ceiling_value_for_income, gender_of_potential_customer):
-                for vehicle in person.get_vehicle_interest().get_vehicle_list():
+                for vehicle in person.vehicle_interest.get_vehicle_list():
                     if vehicle in vehicle_recommendations:
                         vehicle_recommendations[vehicle] = vehicle_recommendations.get(vehicle) + 10
                     else:
@@ -89,9 +89,9 @@ class SalesPersonDirectory:
 
     def check_if_person_falls_in_criteria(self, person, floor_value_for_age, ceiling_value_for_age, floor_value_for_income,
                                           ceiling_value_for_income, gender_of_potential_customer):
-        age_of_person = self.calculate_age(person.get_birth_date())
-        income_of_person = person.get_income()
-        if gender_of_potential_customer == person.get_gender() \
+        age_of_person = self.calculate_age(person.birth_date)
+        income_of_person = person.income
+        if gender_of_potential_customer == person.gender \
                 and floor_value_for_income <= income_of_person <= ceiling_value_for_income \
                 and floor_value_for_age <= age_of_person <= ceiling_value_for_age:
             return True

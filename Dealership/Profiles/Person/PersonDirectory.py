@@ -32,7 +32,7 @@ class PersonDirectory:
 
     def check_if_exist(self, ssn):
         for person in self.__person_list:
-            if person.get_sensitive_information().get_ssn() == ssn:
+            if person.sensitive_information.get_ssn() == ssn:
                 return person
         return None
 
