@@ -31,8 +31,9 @@ class VehicleDealership:
     @staticmethod
     def get_recommendations(age, gender, income):
         recommendations = SalesPersonDirectory().get_recommendations(age, gender, income)
+        print('Recommendations -> ')
         for vehicle in recommendations:
-            print(vehicle.toString())
+            print(vehicle)
 
 if __name__ == '__main__':
     VehicleDealership.main()

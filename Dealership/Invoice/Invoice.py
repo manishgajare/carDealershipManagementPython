@@ -15,6 +15,9 @@ class Invoice:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        return 'id: {}, order: {}, price: {}'.format(self.id, self.order.__str__(), self.price)
+
     @property
     def id(self):
         return self.__id
@@ -26,6 +29,3 @@ class Invoice:
     @property
     def price(self):
         return self.__price
-
-    def toString(self):
-        return 'id: {}, order: {}, price: {}'.format(self.id, self.order, self.price)

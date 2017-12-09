@@ -139,3 +139,4 @@ class Config:
                 inventory_item = i
         order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
+

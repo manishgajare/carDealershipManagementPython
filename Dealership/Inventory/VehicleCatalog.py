@@ -22,6 +22,12 @@ class VehicleCatalog:
         self.__vehicle_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        vehicle_catalog_string = 'Vehicle Catalog -> \n'
+        for vehicle in self.vehicle_list:
+            vehicle_catalog_string = vehicle_catalog_string + vehicle.__str__() + '\n'
+        return vehicle_catalog_string
+
     @property
     def vehicle_list(self):
         return self.__vehicle_list
@@ -59,10 +65,3 @@ class VehicleCatalog:
         self.vehicle_list.add(v)
         print('Vehicle added to Vehicle Catalog')
         return v
-
-    def toString(self):
-        vehicle_catalog_string = ''
-        print('Vehicle Catalog -> ')
-        for vehicle in self.vehicle_list:
-            vehicle_catalog_string = vehicle_catalog_string + vehicle.toString() + '\n'
-        return vehicle_catalog_string

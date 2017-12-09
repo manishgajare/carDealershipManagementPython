@@ -22,6 +22,12 @@ class OrderCatalog:
         self.__order_count_for_id = 1
         self.__initialized = True
 
+    def __str__(self):
+        order_catalog_string = 'Order Catalog -> \n'
+        for order in self.order_list:
+            order_catalog_string = order_catalog_string + order.__str__() + '\n'
+        return order_catalog_string
+
     @property
     def order_list(self):
         return self.__order_list
@@ -40,10 +46,3 @@ class OrderCatalog:
         order.add_order_item(inventory_item, price)
         self.order_list.add(order)
         return order
-
-    def toString(self):
-        order_catalog_string = ''
-        print('Order Catalog -> ')
-        for order in self.order_list:
-            order_catalog_string = order_catalog_string + order.toString() + '\n'
-        return order_catalog_string

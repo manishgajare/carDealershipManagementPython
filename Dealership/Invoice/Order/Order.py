@@ -19,6 +19,15 @@ class Order:
     def __hash__(self):
         return hash(self.id)
 
+    def __str__(self):
+        order_items_string = ''
+        for order_item in self.order_item_list:
+            order_items_string += order_item.__str__()
+        return 'id: {}, customer: {}, sales person: {}, \nOrder Items -> {}'.format(self.id,
+                                                                                    self.customer.__str__(),
+                                                                                    self.sales_person.__str__(),
+                                                                                    order_items_string)
+
     @property
     def id(self):
         return self.__id
@@ -49,9 +58,3 @@ class Order:
         InventoryCatalog().decrement_inventory_quantity(inventory_item, 1)
         self.order_item_list.add(order_item)
         return order_item
-
-    def toString(self):
-        return 'id: {}, customer: {}, sales person: {}, order item list: {}'.format(self.id,
-                                                                                    self.customer,
-                                                                                    self.sales_person,
-                                                                                    self.order_item_list)
