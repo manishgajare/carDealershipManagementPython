@@ -58,7 +58,7 @@ class InventoryCatalog:
 
     def check_if_exist(self, vehicle):
         for item in self.__inventory_list:
-            if item.get_vehicle() == vehicle:
+            if item.vehicle == vehicle:
                 return item
         return None
 
@@ -87,15 +87,15 @@ class InventoryCatalog:
             self.__large_available_inventory_space -= quantity
 
     def _increment_inventory_quantity(self, inventory_item, quantity_to_add):
-        check_if_space_available = self.check_if_enough_space_to_add_inventory(inventory_item.get_vehicle().size,
+        check_if_space_available = self.check_if_enough_space_to_add_inventory(inventory_item.vehicle.size,
                                                                                quantity_to_add)
         if check_if_space_available:
-            inventory_item.increment_quantity_available(quantity_to_add)
-            self._decrement_available_space(inventory_item.get_vehicle().size, quantity_to_add)
+            inventory_item.quantity_available += quantity_to_add
+            self._decrement_available_space(inventory_item.vehicle.size, quantity_to_add)
 
     def _decrement_inventory_quantity(self, inventory_item, quantity_to_remove):
-        inventory_item.decrement_quantity_available(quantity_to_remove)
-        self._decrement_available_space(inventory_item.get_vehicle().size, quantity_to_remove)
+        inventory_item.quantity_available -= quantity_to_remove
+        self._increment_available_space(inventory_item.vehicle.size, quantity_to_remove)
 
     def add_inventory_item(self, vehicle, quantity_to_add):
         existing_item = self.check_if_exist(vehicle)
@@ -109,7 +109,7 @@ class InventoryCatalog:
         if self.check_if_enough_space_to_add_inventory(vehicle.size, quantity_to_add):
             inventory_item = InventoryItem(self.__inventory_count_for_id, vehicle, vehicle.price, quantity_to_add)
             self.__inventory_count_for_id += 1
-            self._decrement_available_space(inventory_item.get_vehicle().size, quantity_to_add)
+            self._decrement_available_space(inventory_item.vehicle.size, quantity_to_add)
             self.__inventory_list.add(inventory_item)
             print('Inventory Item added to Catalog')
             return inventory_item

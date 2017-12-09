@@ -78,9 +78,9 @@ class Config:
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
         for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
 
         # adding customer and placing order
@@ -97,9 +97,9 @@ class Config:
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
         for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
 
         # adding customer and placing order
@@ -116,9 +116,9 @@ class Config:
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
         for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)
 
         # adding customer and placing order
@@ -135,7 +135,7 @@ class Config:
                                                   'IND', vehicle_list)
         customer = customer_directory.add_cutomer(person)
         for i in inventory_catalog.get_inventory_list():
-            if i.get_vehicle() == vehicle:
+            if i.vehicle == vehicle:
                 inventory_item = i
-        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.get_price())
+        order = order_catalog.add_order(customer, sales_person, inventory_item, inventory_item.price)
         invoice_catalog.add_invoice(order)

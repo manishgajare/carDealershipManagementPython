@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78078af5-66ae-4668-98f2-28dad282d19c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Config.py" afterPath="$PROJECT_DIR$/Config.py" />
-      <change beforePath="$PROJECT_DIR$/Dealership/Inventory/VehicleCatalog.py" afterPath="$PROJECT_DIR$/Dealership/Inventory/VehicleCatalog.py" />
+      <change beforePath="$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py" afterPath="$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py" />
+      <change beforePath="$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py" afterPath="$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py" />
+      <change beforePath="$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPersonDirectory.py" afterPath="$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPersonDirectory.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CarDealershipManagement$VehicleDealership.coverage" NAME="VehicleDealership Coverage Results" MODIFIED="1512800519566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CarDealershipManagement$VehicleDealership.coverage" NAME="VehicleDealership Coverage Results" MODIFIED="1512801707496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CarDealershipManagement$Config.coverage" NAME="Config Coverage Results" MODIFIED="1512791621680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CarDealershipManagement$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1512551069536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dealership" />
     <SUITE FILE_PATH="coverage/CarDealershipManagement$SalesPersonDirectory.coverage" NAME="SalesPersonDirectory Coverage Results" MODIFIED="1512655582661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Dealership/Profiles/SalesPerson" />
@@ -26,10 +27,22 @@
       <file leaf-file-name="VehicleDealership.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VehicleDealership.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="225">
+              <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalesPersonDirectory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPersonDirectory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="78" column="58" lean-forward="true" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,11 +51,11 @@
       <file leaf-file-name="Config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="125" column="45" lean-forward="false" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
+            <state relative-caret-position="373">
+              <caret line="86" column="28" lean-forward="true" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
               <folding>
                 <element signature="e#0#60#0" expanded="true" />
-                <marker date="1512800216000" expanded="true" signature="9242:9309" ph="..." />
+                <marker date="1512801603000" expanded="true" signature="9206:9273" ph="..." />
               </folding>
             </state>
           </provider>
@@ -51,30 +64,28 @@
       <file leaf-file-name="Vehicle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dealership/Inventory/Vehicle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            <state relative-caret-position="105">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalesPersonDirectory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPersonDirectory.py">
+      <file leaf-file-name="InventoryItem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="245">
+              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleCatalog.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dealership/Inventory/VehicleCatalog.py">
+      <file leaf-file-name="InventoryCatalog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="826">
-              <caret line="67" column="37" lean-forward="true" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+            <state relative-caret-position="36">
+              <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,19 +127,19 @@
         <option value="$PROJECT_DIR$/Dealership/Invoice/Order/OrderCatalog.py" />
         <option value="$PROJECT_DIR$/Dealership/Profiles/Customer/CustomerDirectory.py" />
         <option value="$PROJECT_DIR$/Dealership/Profiles/Person/PersonDirectory.py" />
-        <option value="$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py" />
         <option value="$PROJECT_DIR$/Dealership/Invoice/Invoice.py" />
         <option value="$PROJECT_DIR$/Dealership/Invoice/Order/Order.py" />
         <option value="$PROJECT_DIR$/Dealership/Invoice/Order/OrderItem.py" />
         <option value="$PROJECT_DIR$/Dealership/Profiles/Person/Person.py" />
         <option value="$PROJECT_DIR$/Dealership/Profiles/Customer/Customer.py" />
-        <option value="$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py" />
         <option value="$PROJECT_DIR$/VehicleDealership.py" />
         <option value="$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPerson.py" />
         <option value="$PROJECT_DIR$/Dealership/Inventory/Vehicle.py" />
         <option value="$PROJECT_DIR$/Dealership/Inventory/VehicleCatalog.py" />
+        <option value="$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py" />
         <option value="$PROJECT_DIR$/Config.py" />
         <option value="$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPersonDirectory.py" />
+        <option value="$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py" />
       </list>
     </option>
   </component>
@@ -176,46 +187,6 @@
               <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dealership" type="462c0819:PsiDirectoryNode" />
               <item name="Inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarDealershipManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dealership" type="462c0819:PsiDirectoryNode" />
-              <item name="Invoice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarDealershipManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dealership" type="462c0819:PsiDirectoryNode" />
-              <item name="Invoice" type="462c0819:PsiDirectoryNode" />
-              <item name="Order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarDealershipManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dealership" type="462c0819:PsiDirectoryNode" />
-              <item name="Profiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarDealershipManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dealership" type="462c0819:PsiDirectoryNode" />
-              <item name="Profiles" type="462c0819:PsiDirectoryNode" />
-              <item name="Customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarDealershipManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dealership" type="462c0819:PsiDirectoryNode" />
-              <item name="Profiles" type="462c0819:PsiDirectoryNode" />
-              <item name="Person" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarDealershipManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarDealershipManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dealership" type="462c0819:PsiDirectoryNode" />
-              <item name="Profiles" type="462c0819:PsiDirectoryNode" />
-              <item name="SalesPerson" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,7 +354,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26666668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26666668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -525,7 +496,7 @@
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
-            <marker date="1512800216000" expanded="true" signature="9242:9309" ph="..." />
+            <marker date="1512801603000" expanded="true" signature="9206:9273" ph="..." />
           </folding>
         </state>
       </provider>
@@ -775,34 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="111" column="77" lean-forward="false" selection-start-line="111" selection-start-column="77" selection-end-line="111" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPerson.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dealership/Inventory/Vehicle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -815,31 +762,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dealership/Inventory/Vehicle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="125" column="45" lean-forward="false" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
+        <state relative-caret-position="373">
+          <caret line="86" column="28" lean-forward="true" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
-            <marker date="1512800216000" expanded="true" signature="9242:9309" ph="..." />
+            <marker date="1512801603000" expanded="true" signature="9206:9273" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dealership/Profiles/SalesPerson/SalesPersonDirectory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="206">
+          <caret line="78" column="58" lean-forward="true" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dealership/Inventory/InventoryCatalog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dealership/Inventory/InventoryItem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VehicleDealership.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="225">
+          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
